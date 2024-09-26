@@ -47,3 +47,5 @@ end )
 UICorner.Parent = KK
 
 loadstring(game:HttpGet("https://pastebin.com/raw/bb3RGCEm"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua"))();
