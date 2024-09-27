@@ -25,6 +25,19 @@ local gun = require(game:GetService("Players").LocalPlayer.Backpack["Scar-L Rifl
 
 gun.FireRate = 1000
 gun.Ammo = math.huge
+gun.MaxRecoilPower = 0
+gun.MinRecoilPower = 0
+gun.RecoilPowerStepAmount = 0
+gun.MimSpread = 0
+gun.MaxSpread = 0
+gun.VRecoil = {
+	[1] = 0,
+	[2] = 0
+}
+gun.HRecoil = {
+	[1] = 0,
+	[2] = 0
+}
 
 local rpg = require(game:GetService("Players").LocalPlayer.Backpack.RPG.ACS_Modulo.Variaveis.Settings)
 
