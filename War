@@ -1,43 +1,29 @@
 local VIP = Instance.new("ScreenGui")
 local KK = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
+local ImgeLabel = Instance.new("ImageButton")
 
 
 VIP.Name = "VIP"
 VIP.Parent = game.CoreGui
 VIP.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-
-KK.Name = "KK"
-KK.Parent = VIP
-KK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-KK.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KK.BorderSizePixel = 0
-KK.Position = UDim2.new(0.0857338831, 0, 0.0989974961, 0)
-KK.Size = UDim2.new(0, 50, 0, 50)
-KK.Font = Enum.Font.SourceSans
-KK.Text = "UI"
-KK.TextColor3 = Color3.fromRGB(0, 0, 0)
-KK.TextSize = 14.000
-KK.Draggable = true
-KK.MouseButton1Click:Connect(function()
+ImgeLabel.Name = "Im"
+ImgeLabel.Parent = VIP
+ImgeLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImgeLabel.Position = UDim2.new(0.0857338831, 0, 0.0989974961, 0)
+ImgeLabel.Size = UDim2.new(0, 50, 0, 50)
+ImgeLabel.Image = "https://www.roblox.com/asset/?id=17204501286"
+ImgeLabel.Draggable = true
+ImgeLabel.MouseButton1Click:Connect(function()
 local gun = require(game:GetService("Players").LocalPlayer.Backpack["Scar-L Rifle"].ACS_Modulo.Variaveis.Settings)
 
 gun.FireRate = 1000
 gun.Ammo = math.huge
+gun.MinSpread = 0
+gun.MaxSprad = 0
+gun.MinRocoilPower = 0
 gun.MaxRecoilPower = 0
-gun.MinRecoilPower = 0
-gun.RecoilPowerStepAmount = 0
-gun.MimSpread = 0
-gun.MaxSpread = 0
-gun.VRecoil = {
-	[1] = 0,
-	[2] = 0
-}
-gun.HRecoil = {
-	[1] = 0,
-	[2] = 0
-}
 
 local rpg = require(game:GetService("Players").LocalPlayer.Backpack.RPG.ACS_Modulo.Variaveis.Settings)
 
@@ -57,7 +43,7 @@ local mgg = require(game:GetService("Players").LocalPlayer.Backpack["Javelin"].A
 
 mgg.Ammo = math.huge
 end )
-UICorner.Parent = KK
+UICorner.Parent = ImgeLabel
 
 loadstring(game:HttpGet("https://pastebin.com/raw/bb3RGCEm"))()
 
