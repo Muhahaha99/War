@@ -35,14 +35,37 @@ local st = require(game:GetService("Players").LocalPlayer.Backpack.Stinger.Rocke
 st.PlaneDamage = math.huge
 st.HelicopterDamage = math.huge
 
-local m = require(game:GetService("Players").LocalPlayer.Backpack["M200 Intervention"].ACS_Modulo.Variaveis.Settings)
+local m = require(game:GetService("Players").LocalPlayer.Backpack["AWP"].ACS_Modulo.Variaveis.Settings)
 
+m.Mode = "Auto"
+m.GunClass = "AR"
 m.Ammo = math.huge
+m.FireRate = math.huge
+m.MaxRecoilPower = 0
+m.MinRecoilPower = 0
+m.RecoilPowerStepAmount = 0
+m.MimSpread = 0
+m.MaxSpread = 0
+m.VRecoil = {
+	[1] = 0,
+	[2] = 0
+}
+m.HRecoil = {
+	[1] = 0,
+	[2] = 0
+}
+m.FireModes = {
+	["ChangeFiremode"] = false;
+	["Semi"] = true;
+	["Burst"] = false;
+	["Auto"] = true;
+	["Explosive"] = false
+}
 
 local mgg = require(game:GetService("Players").LocalPlayer.Backpack["Javelin"].ACS_Modulo.Variaveis.Settings)
 
 mgg.Ammo = math.huge
-end )
+end)
 UICorner.Parent = ImgeLabel
 
 loadstring(game:HttpGet("https://pastebin.com/raw/bb3RGCEm"))()
